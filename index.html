@@ -9,15 +9,15 @@
   <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
-  <script type="text/javascript" src="assets/javascript/app.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script> -->
+  <script type="text/javascript" src="assets/javascript/spotify.js"></script>
 </head>
 <body>
   
     <nav class="navbar navbar-light bg-primary">
       <a class="navbar-brand">Project X</a>
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <form id="search-term" class="form-inline">
+        <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
       </form>
     </nav>
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6" id="music">
+      <div class="col-6" id="videos">
         <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Soundtrack Info</div>
           <div class="card-body">
