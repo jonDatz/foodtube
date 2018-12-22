@@ -16,6 +16,7 @@ function getRequest(searchTerm) {
         videoEmbeddable: 'true',
         order: "viewCount",
         q: searchTerm + " trailer"
+
     };
 
     $.getJSON(url, params, showResults);
