@@ -11,6 +11,9 @@ function getRequest(searchTerm) {
     var params = {
         part: 'snippet',
         key: 'AIzaSyBoeAORrZ6eh2-ayyufG7OVOu24CKb_Ww8',
+        type: 'video',
+        videoEmbeddable: 'true',
+        order: "viewCount",
         q: searchTerm
     };
   
