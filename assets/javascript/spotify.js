@@ -43,6 +43,22 @@ function showResults(results) {
 
     let video = results.items['0'].id.videoId;
     console.log(video);
+
+    $(".mainVid").empty();
+
+    let showIframe = $("<iframe>");
+    showIframe.attr("width", "560");
+    showIframe.attr("height", "315");
+    showIframe.attr("src", "https://www.youtube.com/embed/" + video);
+    showIframe.attr("frameborder", "0");
+    showIframe.attr("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+
+    $(".mainVid").append(showIframe);
+
+
+
+
+
 }
 
 
