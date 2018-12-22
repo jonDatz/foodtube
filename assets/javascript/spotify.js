@@ -16,6 +16,7 @@ function getRequest(searchTerm) {
         videoEmbeddable: 'true',
         order: "viewCount",
         q: searchTerm + " trailer"
+
     };
 
     $.getJSON(url, params, showResults);
@@ -44,6 +45,7 @@ function showResults(results) {
     let video = results.items['0'].id.videoId;
     console.log(video);
 
+
     $(".mainVid").empty();
 
     let showIframe = $("<iframe>");
@@ -54,6 +56,7 @@ function showResults(results) {
     showIframe.attr("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
 
     $(".mainVid").append(showIframe);
+
 
 
 
