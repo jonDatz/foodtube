@@ -1,23 +1,56 @@
 body,html {
-height: 100%;
-background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+height: 150%;
+background-image: linear-gradient(to top, #2b2216 0%, #9e9177 100%);
 }
-nav {
-  margin-bottom: 25px;
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("../images/food2.jpg") no-repeat center center; 
+  background-size: cover;
+  box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
-#navbar{
-background-image: linear-gradient(to top, #072929 5%, #30cfd0 95%);
-box-shadow: 10px 10px 5px rgba(27, 27, 27, 0.37);
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
 }
+.navbar-custom {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+.navbar-custom .navbar-brand {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+}
+
+.navbar-custom .navbar-nav .nav-item .nav-link {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
 #button{
   box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);  
 }
 
 .navbar-brand {
-  font-family: 'ZCOOL KuaiLe', cursive;
+  
   font-size: 35px;
   font-weight: bold;
 }
+
 .card-body {
   box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);
   height:250px;
