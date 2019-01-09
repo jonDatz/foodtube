@@ -13,17 +13,17 @@
   <script type="text/javascript" src="assets/javascript/spotify.js"></script>
 </head>
 <body>
-  
-    <nav class="navbar navbar-light bg-primary">
+  <div class="bg">
+    <nav class="navbar navbar-light bg-primary" id="navbar"> 
       <a class="navbar-brand">Project X</a>
       <form id="search-term" class="form-inline">
         <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-dark my-2 my-sm-0" id="button" type="submit">Search</button>
       </form>
     </nav>
   <div class="container">  
     <div class="row">
-      <div class="col-6" id="movies">
+      <div class="col-3" id="movies">
         <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Movie Info</div>
           <div class="card-body">
@@ -32,7 +32,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6" id="videos">
+      <div class="col-3" id="videos">
         <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Soundtrack Info</div>
           <div class="card-body">
@@ -41,28 +41,32 @@
           </div>
         </div>
       </div>
+      <div class="col-6" id="videos">
+          <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+            <div class="card-header">Movie Trailer</div>
+            <div class="card-body">
+              <div class="mainVid"></div>
+              <h5 class="card-title" id="trailer-title"></h5>
+              <p class="card-text" id="trailer-info"></p>
+            </div>
+          </div>
+        </div>
 
 
 
-
-
-
-
+      
+    </div>
 
 
   </div>
   
-  <div class="mainVid">
+  <!--<div class="mainVid">-->
 
     
 
 
-  </div>
-
-
-
-  </div>
 
 
 </body>
+
 </html>

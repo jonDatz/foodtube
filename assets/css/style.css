@@ -1,9 +1,25 @@
+body,html {
+height: 100%;
+background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
 nav {
-  margin-bottom: 5px;
+  margin-bottom: 25px;
+}
+#navbar{
+background-image: linear-gradient(to top, #072929 5%, #30cfd0 95%);
+box-shadow: 10px 10px 5px rgba(27, 27, 27, 0.37);
+}
+#button{
+  box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);  
 }
 
 .navbar-brand {
   font-family: 'ZCOOL KuaiLe', cursive;
   font-size: 35px;
   font-weight: bold;
+}
+.card-body {
+  box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);
+  height:250px;
+  overflow-y: scroll;
 }
