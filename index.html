@@ -14,18 +14,59 @@
   <script type="text/javascript" src="assets/javascript/edamam.js"></script>
 </head>
 <body>
-  <div class="bg  ">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Start Bootstrap</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Join</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <!--OLD NAV BAR DONT think we need it---
+    <div class="bg  ">
     <nav class="navbar navbar-light bg-primary" id="navbar"> 
       <a class="navbar-brand">Project X</a>
       <form id="search-term" class="form-inline">
         <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-dark my-2 my-sm-0" id="button" type="submit">Search</button>
-      </form>
-    </nav>
+      </form> 
+    </nav> -->
+
+    <header class="masthead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Search for your favorite recipes and learn how to make delicious meals in no time!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form id="search-term" class="form-inline">
+              <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-dark my-2 my-sm-0" id="button" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <h1 class="my-4 text-center" >Your Results</h1>
+
+<!--Displays recipe info and id's are still movie themed-->
   <div class="container">  
     <div class="row">
-      <div class="col-3" id="movies">
-        <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+
+      <div class="col-lg-4 col-sm-6 portfolio-item" id="movies">
+        <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Recipe Info</div>
           <div class="card-body">
             <h5 class="card-title" id="movie-title"></h5>
@@ -33,6 +74,47 @@
           </div>
         </div>
       </div>
+<!--Displays Video from YouTube-->
+      <div class="col-lg-4 col-sm-6 portfolio-item" id="videos">
+        <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
+          <div class="card-header">Video</div>
+          <div class="card-body">
+              <div class="mainVid"></div>
+            <h5 class="card-title" id="trailer-title"></h5>
+            <p class="card-text" id="trailer-info"></p>
+          </div>
+        </div>
+      </div>
+<!--List of Youtube Results-->
+      <div class="col-lg-4 col-sm-6 portfolio-item" id="videos">
+          <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
+            <div class="card-header">Results</div>
+            <div class="card-body">
+              <h5 class="card-title" id="soundtrack-title"></h5>
+              <p class="card-text" id="soundtrack-info"></p>
+            </div>
+          </div>
+        </div>
+      
+        
+</div>
+<!--I WAS HAVING TROUBLE GETTING THE RESULTS TO DISPLAY IN MULTIPLE RECIPE CARDS-->
+
+      <!--Displays video after search
+
+      <div class="col-6" id="videos">
+          <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
+            <div class="card-header"></div>
+            <div class="card-body">
+              <div class="mainVid"></div>
+              <h5 class="card-title" id="trailer-title"></h5>
+              <p class="card-text" id="trailer-info"></p>
+            </div>
+          </div>
+        </div>
+
+           OLDER CODE Soundtrack AKA list of videos from Youtube search
+
       <div class="col-3" id="videos">
         <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Soundtrack Info</div>
@@ -42,31 +124,16 @@
           </div>
         </div>
       </div>
-      <div class="col-6" id="videos">
-          <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
-            <div class="card-header">Movie Trailer</div>
-            <div class="card-body">
-              <div class="mainVid"></div>
-              <h5 class="card-title" id="trailer-title"></h5>
-              <p class="card-text" id="trailer-info"></p>
-            </div>
-          </div>
-        </div>
 
 
+    Footer -->
 
-      
-    </div>
-
-
-  </div>
-  
-  <!--<div class="mainVid">-->
-
-    
-
-
-
+  <footer class="py-3 bg-dark fixed-bottom" id="footer">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Project X 2018</p>
+      </div>
+     
+  </footer>
 
 </body>
 
