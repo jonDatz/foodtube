@@ -15,7 +15,7 @@ function getRequest(searchTerm) {
         type: 'video',
         videoEmbeddable: 'true',
         order: "viewCount",
-        q: searchTerm + " trailer"
+        q: searchTerm
 
     };
 
@@ -64,6 +64,3 @@ function showResults(results) {
 
 }
 
-
-
-    // <iframe width="560" height="315" src="https://www.youtube.com/embed/dop4MTlf_zc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
