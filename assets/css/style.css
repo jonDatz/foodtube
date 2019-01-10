@@ -1,13 +1,21 @@
-body,html {
-height: 150%;
-background-image: linear-gradient(to top, #2b2216 0%, #9e9177 100%);
+
+
+body,
+html {
+  height: 150%;
+  background-image: linear-gradient(to top, #2b2216 0%, #9e9177 100%);
+  scroll-behavior: smooth;
 }
+
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../images/food2.jpg") no-repeat center center; 
+  background: url("../images/food2.jpg") no-repeat center center;
   background-size: cover;
-  box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);
+  /* box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37); */
+  -webkit-box-shadow: inset 0px -17px 43px 7px rgba(0,0,0,0.66);
+  -moz-box-shadow: inset 0px -17px 43px 7px rgba(0,0,0,0.66);
+  box-shadow: inset 0px -17px 43px 7px rgba(0,0,0,0.66);
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -20,7 +28,9 @@ header.masthead .overlay {
   top: 0;
   left: 0;
   opacity: 0.5;
+
 }
+
 .navbar-custom {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -41,18 +51,68 @@ header.masthead .overlay {
   letter-spacing: 0.1rem;
 }
 
-#button{
-  box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);  
+@media (min-width: 992px) {
+
+  .container {
+      max-width: 980px;
+      padding-right: 0px;
+      padding-left: 0px;
+  }
+  }
+
+#button {
+  box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);
+
+}
+
+#recipeCards {
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-top: 5px;
+}
+
+#videos {
+  padding-right: 0px;
+  padding-left: 0px;
+
 }
 
 .navbar-brand {
-  
+
   font-size: 35px;
   font-weight: bold;
 }
 
+.card {
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 2px;
+  margin: 5px;
+  height: 280px;
+}
+
+
+/* Card title sizing */
+
+
+.cardTitle {
+  font-size: 1.03rem;
+  padding-top: 2px;
+}
+
+.card-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
 .card-body {
   box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);
-  height:250px;
+  height: 250px;
   overflow-y: scroll;
+}
+
+.card-footer {
+  padding-top: 0px;
+  padding-bottom: 2px;
 }
