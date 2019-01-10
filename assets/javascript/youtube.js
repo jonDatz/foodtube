@@ -15,7 +15,7 @@ function getRequest(searchTerm) {
         type: 'video',
         videoEmbeddable: 'true',
         order: "viewCount",
-        q: searchTerm
+        q: searchTerm + "recipe"
 
     };
 

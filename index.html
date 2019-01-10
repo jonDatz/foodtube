@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project X</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
   <!-- <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script> -->
   <script type="text/javascript" src="assets/javascript/youtube.js"></script>
   <script type="text/javascript" src="assets/javascript/edamam.js"></script>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="#">Start Bootstrap</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Join</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Log In</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Join</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <!--OLD NAV BAR DONT think we need it---
     <div class="bg  ">
     <nav class="navbar navbar-light bg-primary" id="navbar"> 
@@ -42,30 +50,47 @@
       </form> 
     </nav> -->
 
-    <header class="masthead text-white text-center">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-9 mx-auto">
-            <h1 class="mb-5">Search for your favorite recipes and learn how to make delicious meals in no time!</h1>
-          </div>
-          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-            <form id="search-term" class="form-inline">
-              <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-dark my-2 my-sm-0" id="button" type="submit">Search</button>
-            </form>
-          </div>
+  <header class="masthead text-white text-center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">Search for your favorite recipes and learn how to make delicious meals in no time!</h1>
+          <h1 class="mb-5"></h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form id="search-term" class="form-inline" action="#resultsAnchor">
+            <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light" id="button" type="submit"> <strong>Search</strong></button>
+          </form>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-  <h1 class="my-4 text-center" >Your Results</h1>
+  <h1 class="my-4 text-center">Your Results</h1>
 
-<!--Displays recipe info and id's are still movie themed-->
-  <div class="container">  
+  <!--Displays recipe info and id's are still movie themed-->
+  <div class="container">
     <div class="row">
 
-      <div class="col-lg-4 col-sm-6 portfolio-item" id="movies">
+
+      <!-- container for recipe cards -->
+        <div class="col-md-9" id="recipeCards">
+
+
+
+
+
+
+
+        </div>
+
+      
+
+
+      <!-- Going to cut this out because we need to create it dynamically based on all results -->
+      <!-- <div class="col-lg-4 col-sm-6 portfolio-item" id="movies">
         <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Recipe Info</div>
           <div class="card-body">
@@ -73,9 +98,12 @@
             <p class="card-text" id="movie-info"></p>
           </div>
         </div>
-      </div>
-<!--Displays Video from YouTube-->
-      <div class="col-lg-4 col-sm-6 portfolio-item" id="videos">
+      </div> -->
+
+
+      <!--Displays Video from YouTube. Taken out temp to expand recipe card section -->
+
+<!--  <div class="col-lg-4 col-sm-6" id="videos">
         <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Video</div>
           <div class="card-body">
@@ -84,23 +112,27 @@
             <p class="card-text" id="trailer-info"></p>
           </div>
         </div>
-      </div>
-<!--List of Youtube Results-->
-      <div class="col-lg-4 col-sm-6 portfolio-item" id="videos">
-          <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
-            <div class="card-header">Results</div>
-            <div class="card-body">
-              <h5 class="card-title" id="soundtrack-title"></h5>
-              <p class="card-text" id="soundtrack-info"></p>
-            </div>
+      </div> -->
+
+
+
+      <!--List of Youtube Results-->
+      <div class="col-md-3 " id="videos">
+        <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
+          <div class="card-header">Videos</div>
+          <div class="card-body">
+            <h5 class="card-title" id="soundtrack-title"></h5>
+            <p class="card-text" id="soundtrack-info"></p>
           </div>
         </div>
-      
-        
-</div>
-<!--I WAS HAVING TROUBLE GETTING THE RESULTS TO DISPLAY IN MULTIPLE RECIPE CARDS-->
+      </div>
 
-      <!--Displays video after search
+
+    </div>
+  </div>
+  <!--I WAS HAVING TROUBLE GETTING THE RESULTS TO DISPLAY IN MULTIPLE RECIPE CARDS-->
+
+  <!--Displays video after search
 
       <div class="col-6" id="videos">
           <div class="card text-white bg-dark mb-3" style="max-width: 100%;">
@@ -129,10 +161,10 @@
     Footer -->
 
   <footer class="py-3 bg-dark fixed-bottom" id="footer">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Project X 2018</p>
-      </div>
-     
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Project X 2018</p>
+    </div>
+
   </footer>
 
 </body>
