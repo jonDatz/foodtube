@@ -25,8 +25,12 @@ $(document).ready(function () {
 
             let recipeCount = response.hits;
 
+
             // we start a for loop to create 10 cards worth of recipes
             
+
+            // here we're appending to a box. Edit this to create multiple cards isntead
+
             for (var i = 0; i < recipeCount.length; i++) {
                 console.log("For loop ran");
 
@@ -36,8 +40,10 @@ $(document).ready(function () {
                 console.log(recipeName);
 
 
+
                 // Build individual cards for each recipe displaying recipe photo, title, and "more info" button for  viewing..
                 // ..full ingredient list and link to recipe
+
 
                 let showDiv = $("<div>");
                 let showImage = $("<img>");
@@ -50,13 +56,16 @@ $(document).ready(function () {
                 showImage.attr("src", image);
                 showTitle.attr("class", "cardTitle");
                 showFooter.attr("class","card-footer text-muted");
+
                 showFooter.attr("data-count", i);
                 showFooter.attr("data-target", "#modal-" + i);
                 showFooter.attr("data-toggle", "modal");
+
                 showTitle.attr("class", "card-title");
                 showDiv.prepend(showFooter);
                 showDiv.prepend(showTitle);
                 showDiv.prepend(showImage);
+
 
 
                 $("#recipeCards").append(showDiv);
@@ -81,11 +90,11 @@ $(document).ready(function () {
                 }
 
 
-                // Having trouble writing new text to modal
 
                 // console.log(recipeName);
                 // $("#modalTitle").text(recipeName);
 
+                $("#recipeCards").append(showDiv);
 
 
 
