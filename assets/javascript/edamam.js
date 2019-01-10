@@ -93,7 +93,8 @@ $(document).ready(function () {
 
                 $("#recipeCards").append(showDiv);
 
-                let modalRecipe = response.hits[i].recipe.ingredients;                
+                //commented out 97- djj
+                //let modalRecipe = response.hits[i].recipe.ingredients;                
 
                 console.log(modalRecipe);
 
