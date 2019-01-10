@@ -1,9 +1,16 @@
 $(document).ready(function () {
+
+    $("#videos").hide();
+
+
+
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
         getRequest(searchTerm);
         console.log(searchTerm);
+
+        $("#videos").show();
     });
 });
 

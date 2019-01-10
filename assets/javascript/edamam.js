@@ -25,7 +25,8 @@ $(document).ready(function () {
 
             let recipeCount = response.hits;
 
-            // here we're appending to a box. Edit this to create multiple cards isntead
+            // we start a for loop to create 10 cards worth of recipes
+            
             for (var i = 0; i < recipeCount.length; i++) {
                 console.log("For loop ran");
 
@@ -33,6 +34,10 @@ $(document).ready(function () {
                 
                 let recipeName = response.hits[i].recipe.label;
                 console.log(recipeName);
+
+
+                // Build individual cards for each recipe displaying recipe photo, title, and "more info" button for  viewing..
+                // ..full ingredient list and link to recipe
 
                 let showDiv = $("<div>");
                 let showImage = $("<img>");
@@ -45,6 +50,9 @@ $(document).ready(function () {
                 showImage.attr("src", image);
                 showTitle.attr("class", "cardTitle");
                 showFooter.attr("class","card-footer text-muted");
+                showFooter.attr("data-count", i);
+                showFooter.attr("data-target", "#modal-" + i);
+                showFooter.attr("data-toggle", "modal");
                 showTitle.attr("class", "card-title");
                 showDiv.prepend(showFooter);
                 showDiv.prepend(showTitle);
@@ -52,6 +60,32 @@ $(document).ready(function () {
 
 
                 $("#recipeCards").append(showDiv);
+
+                let modalRecipe = response.hits[i].recipe.ingredients;                
+
+                console.log(modalRecipe);
+
+
+
+                // Building the Modal. Using this ugly mess so I don't have to build a modal piece by piece
+                $("#recipeCards").append('<div class="modal fade" id="modal-' + i + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalTitle">' + recipeName + '</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body" id="modalBody"><ul class="modalList"></ul></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div></div></div></div>');
+
+
+                // Trying to create a loop to show all ingredients. THIS IS WHERE I'm having trouble
+                for (let j = 0; j < modalRecipe.length; j++) {
+                    console.log("for loop ran");
+                    let modalIngredients = modalRecipe[j].text;
+                    console.log(modalIngredients);
+                    $(".modalList").append("<li>").text(modalIngredients);
+
+                }
+
+
+                // Having trouble writing new text to modal
+
+                // console.log(recipeName);
+                // $("#modalTitle").text(recipeName);
+
 
 
 
