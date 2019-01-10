@@ -72,20 +72,16 @@ $(document).ready(function () {
 
 
                 // Trying to create a loop to show all ingredients. THIS IS WHERE I'm having trouble
+                // Have it so it's spitting out ingredients... but it may be listing every single recipe's ingredients on each card
                 for (let j = 0; j < modalRecipe.length; j++) {
                     console.log("for loop ran");
                     let modalIngredients = modalRecipe[j].text;
                     console.log(modalIngredients);
-                    $(".modalList").append("<li>").text(modalIngredients);
+                    let modalList = $("<li>").text(modalIngredients);
+
+                    $(".modalList").append(modalList)
 
                 }
-
-
-                // Having trouble writing new text to modal
-
-                // console.log(recipeName);
-                // $("#modalTitle").text(recipeName);
-
 
 
 
