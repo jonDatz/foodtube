@@ -36,9 +36,11 @@ function showResults(results) {
         var video = results.items[index].id.videoId;
         var title = value.snippet.title;
         var thumbnail = value.snippet.thumbnails.default.url;
+
         html += '<a target="_blank" href="https://www.youtube.com/embed/' + video + '"><img src="' + thumbnail + '"></a>';
         html += '<a target="_blank" href="https://www.youtube.com/embed/' + video + '"><p class="youtubelink" id=link-' + index + '>' + title + '</p></a>'
         console.log(video)
+
 
     });
     
