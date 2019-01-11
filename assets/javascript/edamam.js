@@ -48,7 +48,7 @@ $(document).ready(function () {
                 let showTitle = $("<p>").text(recipeName);
                 let showFooter = $("<div>").text(" View full recipe..");
 
-                showDiv.attr("class", "card col-md-3 d-inline-flex");
+                showDiv.attr("class", "card col-md-3 d-inline-flex animated fadeInUp");
                 showDiv.attr("style", "max-width: 11rem;");
                 showImage.attr("class", "card-img-top");
                 showImage.attr("src", image);

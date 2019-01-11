@@ -116,3 +116,7 @@ header.masthead .overlay {
   padding-top: 0px;
   padding-bottom: 2px;
 }
+
+#search-term {
+  display: inline-block;
+ }
