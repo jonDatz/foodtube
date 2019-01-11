@@ -34,10 +34,13 @@ function showResults(results) {
     var entries = results.items;
 
     $.each(entries, function (index, value) {
+        var video = results.items[index].id.videoId;
         var title = value.snippet.title;
         var thumbnail = value.snippet.thumbnails.default.url;
-        html += '<p>' + title + '</p>';
-        html += '<img src="' + thumbnail + '">';
+        html += '<p id=link-' + index +  '>' + title + '</p>';
+        html += '<a target="_blank" href="https://www.youtube.com/embed/' + video + '"><img src="' + thumbnail + '"></a>';
+        console.log(video)
+
     });
 
     console.log(results)
