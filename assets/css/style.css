@@ -64,7 +64,7 @@ header.masthead .overlay {
 
 #button {
   box-shadow: 10px 10px 10px rgba(27, 27, 27, 0.37);
-
+  margin: 3px;
 }
 
 #recipeCards {
