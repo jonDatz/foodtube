@@ -2,8 +2,6 @@ $(document).ready(function () {
 
     $("#videos").hide();
 
-
-
     $('#search-term').submit(function (event) {
         event.preventDefault();
         var searchTerm = $('#query').val();
@@ -11,6 +9,7 @@ $(document).ready(function () {
         console.log(searchTerm);
 
         $("#videos").show();
+        $("#videos").addClass("animated fadeInUp");
     });
 });
 
@@ -39,35 +38,23 @@ function showResults(results) {
         var thumbnail = value.snippet.thumbnails.default.url;
 
         html += '<a target="_blank" href="https://www.youtube.com/embed/' + video + '"><img src="' + thumbnail + '"></a>';
-        html += '<a target="_blank" href="https://www.youtube.com/embed/' + video + '"><p id=link-' + index + '>' + title + '</p></a>'
-
+        html += '<a target="_blank" href="https://www.youtube.com/embed/' + video + '"><p class="youtubelink" id=link-' + index + '>' + title + '</p></a>'
         console.log(video)
 
+
     });
-
-    console.log(results)
-    $('#soundtrack-info').html(html);
-
-
-
-    // *** BELOW IS ATTEMPTING TO GET MAIN VIDEO IN AN EMBEDDED PLAYER *** //
+    
+$('#video-info').html(html);
 
 
 
-    let video = results.items['0'].id.videoId;
-    console.log(video);
 
 
-    $(".mainVid").empty();
 
-    let showIframe = $("<iframe>");
-    showIframe.attr("width", "560");
-    showIframe.attr("height", "315");
-    showIframe.attr("src", "https://www.youtube.com/embed/" + video);
-    showIframe.attr("frameborder", "0");
-    showIframe.attr("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+ 
 
-    $(".mainVid").append(showIframe);
+
+   
 
 
 
