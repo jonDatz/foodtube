@@ -46,7 +46,7 @@ $(document).ready(function () {
                 let showDiv = $("<div>");
                 let showImage = $("<img>");
                 let showTitle = $("<p>").text(recipeName);
-                let showFooter = $("<div>").text(" View full recipe..");
+                let showFooter = $("<div>").text(" View Ingredients...");
 
                 showDiv.attr("class", "card col-md-3 d-inline-flex animated fadeInUp");
                 showDiv.attr("style", "max-width: 11rem;");
