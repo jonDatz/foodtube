@@ -10,11 +10,14 @@
     crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
   <!-- <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/javascript/youtube.js"></script>
   <script type="text/javascript" src="assets/javascript/edamam.js"></script>
 </head>
@@ -64,7 +67,7 @@
         </div>
         <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
           <form id="search-term" class="form-inline" action="#resultsAnchor">
-            <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <input id="query" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" required>
             <button class="btn btn-outline-light" id="button" type="submit"> <strong>Search</strong></button>
           </form>
         </div>
@@ -80,7 +83,7 @@
 
 
       <!-- container for recipe cards -->
-        <div class="col-md-9" id="recipeCards">
+      <div class="col-md-9" id="recipeCards">
 
 
 
@@ -88,9 +91,9 @@
 
 
 
-        </div>
+      </div>
 
-      
+
 
 
       <!-- Going to cut this out because we need to create it dynamically based on all results -->
@@ -107,7 +110,7 @@
 
       <!--Displays Video from YouTube. Taken out temp to expand recipe card section -->
 
-<!--  <div class="col-lg-4 col-sm-6" id="videos">
+      <!--  <div class="col-lg-4 col-sm-6" id="videos">
         <div class="card h-100 text-white bg-dark mb-3" style="max-width: 100%;">
           <div class="card-header">Video</div>
           <div class="card-body">
@@ -170,7 +173,7 @@
     </div>
 
   </footer>
-  
+
 
 </body>
 
