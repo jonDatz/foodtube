@@ -30,7 +30,6 @@ $(document).ready(function () {
 
 
             for (var i = 0; i < recipeCount.length; i++) {
-                console.log("For loop ran");
 
                 let image = response.hits[i].recipe.image;
 
@@ -46,12 +45,16 @@ $(document).ready(function () {
                 let showDiv = $("<div>");
                 let showImage = $("<img>");
                 let showTitle = $("<p>").text(recipeName);
-                let showFooter = $("<div>").text(" View Ingredients...");
+                let showFooter = $("<div>").text("Click for more info");
 
                 showDiv.attr("class", "card col-md-3 d-inline-flex animated fadeInUp");
                 showDiv.attr("style", "max-width: 11rem;");
+                showDiv.attr("data-target", "#modal-" + i);
+                showDiv.attr("data-toggle", "modal");
                 showImage.attr("class", "card-img-top");
                 showImage.attr("src", image);
+                showImage.attr("data-target", "#modal-" + i);
+                showImage.attr("data-toggle", "modal");
                 showTitle.attr("class", "cardTitle");
                 showFooter.attr("class", "card-footer text-muted");
 
@@ -75,7 +78,7 @@ $(document).ready(function () {
 
                 // Building the Modal. Using this ugly mess so I don't have to build a modal piece by piece
 
-                $("#recipeCards").append('<div class="modal fade" id="modal-' + i + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="modalTitle">' + recipeName + '</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body" id="modalBody"><ul class="modalList-' + [i] + '"></ul></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><a class="btn btn-outline-success" href="' + modalLink + '" role="button" target="_blank">View Recipe</a></div></div></div></div>');
+                $("#recipeCards").append('<div class="modal fade" id="modal-' + i + '" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h4 class="modal-title" id="modalTitle">' + recipeName + '</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body" id="modalBody"><h5>List of Ingredients</h5><ul class="modalList-' + [i] + '"></ul></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><a class="btn btn-outline-success" href="' + modalLink + '" role="button" target="_blank">View Recipe</a></div></div></div></div>');
 
 
                 $(".modalList").empty();
@@ -85,7 +88,6 @@ $(document).ready(function () {
                 for (let j = 0; j < modalRecipe.length; j++) {
 
 
-                    console.log("for loop ran");
                     let modalIngredients = modalRecipe[j].text;
                     console.log(modalIngredients);
                     let modalList = $("<li>").text(modalIngredients);
