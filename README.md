@@ -1,8 +1,5 @@
-# project1_apis
-Project #1 - APIs
-
 # FOODtube
-FOODtube is a portal for home chefs looking for an independent source of recipes and visual cooking instruction.  Not all the best meals come from the Food Network.
+FOODtube is a portal for home chefs looking for an independent source of recipes and visual cooking instruction.  Not all the best meals come from the Food Network. https://jondatz.github.io/project1_apis/
 
 ## Built With
 * [JQuery] (StackPath CDN) https://code.jquery.com/
