@@ -1,5 +1,5 @@
 # FOODtube
-FOODtube is a portal for home chefs looking for an independent source of recipes and visual cooking instruction.  Not all the best meals come from the Food Network. https://jondatz.github.io/project1_apis/
+FOODtube is a portal for home chefs looking for an independent source of recipes and visual cooking instruction.  Not all the best meals come from the Food Network. https://jondatz.github.io/foodtube/
 
 ## Built With
 * [JQuery] (StackPath CDN) https://code.jquery.com/
